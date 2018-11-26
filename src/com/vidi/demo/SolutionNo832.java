@@ -16,4 +16,30 @@ package com.vidi.demo;
  * results in [1, 0, 0].
  */
 public class SolutionNo832 {
+
+	public static int[][] flipAndInvertImage(int[][] A) {
+		for (int i = 0; i < A.length; i++) {
+			int length = A[i].length;
+			for (int j = 0; j < length; j++) {
+				if (j < (length / 2)) {
+					int temp = A[i][j];
+					A[i][j] = A[i][length - 1 - j];
+					A[i][length - 1 - j] = temp;
+				}
+				A[i][j] = (A[i][j] + 1) % 2;
+			}
+		}
+		return A;
+	}
+
+	public static void main(String[] args) {
+		int[][] A = new int[][]{{1, 1, 0, 0}, {1, 0, 0, 1}, {0, 1, 1, 1}, {1, 0, 1, 0}};
+		int[][] invertImage = flipAndInvertImage(A);
+		for (int[] ints : invertImage) {
+			for (int anInt : ints) {
+				System.out.print(anInt + "\t");
+			}
+			System.out.println();
+		}
+	}
 }
