@@ -1,7 +1,5 @@
 package com.vidi.demo;
 
-import sun.plugin2.message.Message;
-
 /**
  * @Author : Vidi
  * @Date : 2018/12/6 16:35
