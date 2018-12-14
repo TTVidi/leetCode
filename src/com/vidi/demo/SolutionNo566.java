@@ -23,15 +23,15 @@ public class SolutionNo566 {
 	public static int[][] matrixReshape(int[][] nums, int r, int c) {
 		if (nums.length * nums[0].length == r * c) {
 			int[][] results = new int[r][c];
-			int index = 0;
+//			int index = 0;
 //			for (int[] num : nums) {
 //				for (int i : num) {
 //					results[index / c][index % c] = i;
 //					index++;
 //				}
 //			}
-			for (int i=0;i<r*c;i++)
-				results[i/c][i%c] = nums[i/nums.length][i%nums.length];
+			for (int i = 0; i < r * c; i++)
+				results[i / c][i % c] = nums[i / nums[0].length][i % nums[0].length];
 			return results;
 		}
 		return nums;
