@@ -18,14 +18,16 @@ package com.vidi.demo;
 public class SolutionNo806 {
 	public int[] numberOfLines(int[] widths, String S) {
 		int[] res = new int[2];
-		if(S.isEmpty()) return res;
-		for(char c : S.toCharArray()){
-			int index = c-'a';
-			if(res[1]+widths[index]>100){
+		if (S.isEmpty()) {
+			return res;
+		}
+		for (char c : S.toCharArray()) {
+			int index = c - 'a';
+			if (res[1] + widths[index] > 100) {
 				res[0]++;
-				res[1]=widths[index];
-			}else{
-				res[1]+=widths[index];
+				res[1] = widths[index];
+			} else {
+				res[1] += widths[index];
 			}
 		}
 		res[0]++;

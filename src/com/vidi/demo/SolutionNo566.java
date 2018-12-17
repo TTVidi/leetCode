@@ -30,8 +30,9 @@ public class SolutionNo566 {
 //					index++;
 //				}
 //			}
-			for (int i = 0; i < r * c; i++)
+			for (int i = 0; i < r * c; i++) {
 				results[i / c][i % c] = nums[i / nums[0].length][i % nums[0].length];
+			}
 			return results;
 		}
 		return nums;
