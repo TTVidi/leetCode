@@ -1,5 +1,8 @@
 package com.vidi.demo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @Author : Vidi
  * @Date : 2018/12/24 8:24
@@ -22,7 +25,37 @@ package com.vidi.demo;
  * Return the final order of the logs.
  */
 public class SolutionNo937 {
-	public String[] reorderLogFiles(String[] logs) {
-		return null;
+	public static String[] reorderLogFiles(String[] logs) {
+		List<String> digits = new ArrayList<>(logs.length);
+		List<String> letters = new ArrayList<>(logs.length);
+		for (String log : logs) {
+			String[] split = log.split(" ");
+			if (split[1].charAt(0) >= '0' && split[1].charAt(0) <= '9') {
+				digits.add(log);
+			} else {
+				letters.add(log);
+			}
+		}
+		for (int i = 0; i < letters.size() - 1; i++) {
+			for (int j = 0; j < letters.size() - i - 1; j++) {
+				if (letters.get(j).substring(letters.get(j).indexOf(" ")).compareTo(letters.get(j + 1).substring(letters.get(j + 1).indexOf(" "))) > 0) {
+					String temp = letters.get(j);
+					letters.set(j, letters.get(j + 1));
+					letters.set(j + 1, temp);
+				}
+			}
+		}
+		letters.addAll(digits);
+		String[] result = new String[letters.size()];
+		letters.toArray(result);
+		return result;
+	}
+
+	public static void main(String[] args) {
+		String[] strings = reorderLogFiles(new String[]{"d 02", "2 5 3", "k r y", "6 srs", "x fp"});
+		for (String string : strings) {
+			System.out.println(string);
+		}
+
 	}
 }
