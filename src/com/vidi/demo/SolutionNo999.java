@@ -64,8 +64,34 @@ public class SolutionNo999 {
 		}
 		return index;
 	}
+	public int numRookCaptures(char[][] board) {
+		int x=0,y=0,count=0;
+		for(int i = 0;i<8;i++){
+			for(int j = 0;j<8;j++){
+				if(board[i][j]=='R'){x=i;y=j;}
+			}
+		}
+
+		for(int j = y;j<8;j++){
+			if(board[x][j] == 'B')break;
+			else if(board[x][j]=='p'){ count++; break;}
+		}
+		for(int j = y;j>-1;j--){
+			if(board[x][j] == 'B')break;
+			else if(board[x][j]=='p'){ count++; break;}
+		}
+		for(int j = x;j<8;j++){
+			if(board[j][y] == 'B')break;
+			else if(board[j][y]=='p'){ count++; break;}
+		}
+		for(int j = x;j>-1;j--){
+			if(board[j][y] == 'B')break;
+			else if(board[j][y]=='p'){ count++; break;}
+		}
+		return count;
+	}
 
 	public static void main(String[] args) {
-		System.out.println(maxCommission(new int[]{11, 12, 13, 14, 16}, new int[]{2, 1, 15, 20, 25}, new int[]{2, 3, 4, 6}));
+
 	}
 }
