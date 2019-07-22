@@ -14,6 +14,44 @@ package com.vidi.demo;
  */
 public class SolutionNo1046 {
 	public int lastStoneWeight(int[] stones) {
-		return 0;
+		if (stones.length == 1) {
+			return stones[0];
+		}
+		int result = 0;
+		while ((result = process(stones)) < 0) {
+
+		}
+		return result;
+	}
+
+	public int process(int[] stones) {
+		int max = 0;
+		int second = 0;
+		if (stones[1] > stones[0]) {
+			max = 1;
+			second = 0;
+		} else {
+			max = 0;
+			second = 1;
+		}
+		for (int i = 2; i < stones.length; i++) {
+			int stone = stones[i];
+			if (stone > stones[max]) {
+				second = max;
+				max = i;
+			} else if (stone > stones[second]) {
+				second = i;
+			}
+		}
+		if (stones[second] == 0) {
+			return stones[max];
+		}
+		stones[max] = stones[max] - stones[second];
+		stones[second] = 0;
+		return -1;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(new SolutionNo1046().lastStoneWeight(new int[]{1,3}));
 	}
 }
