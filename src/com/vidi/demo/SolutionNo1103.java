@@ -18,4 +18,39 @@ package com.vidi.demo;
  * Return an array (of length num_people and sum candies) that represents the final distribution of candies.
  */
 public class SolutionNo1103 {
+	public int[] distributeCandies(int candies, int num_people) {
+		int i = 0;
+		int current;
+		int next;
+		for (; ; i++) {
+			current = (i * num_people + i * i * num_people * num_people) >> 1;
+			next = ((i + 1) * num_people + (i + 1) * (i + 1) * num_people * num_people) >> 1;
+			if (candies >= current && candies < next) {
+				break;
+			}
+		}
+		int base = i * num_people;
+		int rest = candies - current;
+		int[] result = new int[num_people];
+		for (int j = 1; j <= num_people; j++) {
+			int total = (num_people * i * (i - 1) >> 1) + i * j;
+			int should = base + j;
+			if (should <= rest) {
+				rest -= should;
+				total += should;
+			} else {
+				total += rest;
+				rest = 0;
+			}
+			result[j - 1] = total;
+		}
+		return result;
+	}
+
+	public static void main(String[] args) {
+		int[] ints = new SolutionNo1103().distributeCandies(10, 3);
+		for (int anInt : ints) {
+			System.out.println(anInt);
+		}
+	}
 }
