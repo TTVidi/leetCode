@@ -37,7 +37,7 @@ public class SolutionNo283 {
 	}
 
 	public static void main(String[] args) {
-		moveZeroes(new int[]{0,0,1,12,0,13,14,15,0});
+		moveZeroes(new int[]{0, 0, 1, 12, 0, 13, 14, 15, 0});
 
 	}
 }

@@ -14,6 +14,6 @@ package com.vidi.demo;
  */
 public class SolutionNo1025 {
 	public boolean divisorGame(int N) {
-		return N%2==0;
+		return N % 2 == 0;
 	}
 }

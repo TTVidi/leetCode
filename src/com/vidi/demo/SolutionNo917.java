@@ -12,7 +12,7 @@ package com.vidi.demo;
  */
 public class SolutionNo917 {
 	public static String reverseOnlyLetters(String S) {
-		int j = S.length()-1;
+		int j = S.length() - 1;
 		char[] chars = S.toCharArray();
 		for (int i = 0; i < j; i++) {
 			if ((chars[i] >= 'a' && chars[i] <= 'z') || (chars[i] >= 'A' && chars[i] <= 'Z')) {

@@ -25,7 +25,7 @@ public class SolutionNo961 {
 			}
 		}
 		for (Map.Entry<Integer, Integer> entry : results.entrySet()) {
-			if (entry.getValue() == A.length/2) {
+			if (entry.getValue() == A.length / 2) {
 				return entry.getKey();
 			}
 		}

@@ -24,6 +24,7 @@ public class SolutionNo933 {
 
 	class RecentCounter {
 		private Deque<Integer> deque;
+
 		public RecentCounter() {
 			deque = new ArrayDeque<>();
 		}

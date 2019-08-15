@@ -24,12 +24,12 @@ public class SolutionNo836 {
 	/**
 	 * checking if an axis is overlap
 	 */
-	private boolean isOverlap(int p1x1, int p1x2, int p2x1, int p2x2 ){
-		if((p2x1>=p1x1 && p2x1<p1x2) ||
-				(p2x2<=p1x2 && p2x2 > p1x1) ||
-				(p2x1<=p1x1 && p2x2>=p1x2)){
+	private boolean isOverlap(int p1x1, int p1x2, int p2x1, int p2x2) {
+		if ((p2x1 >= p1x1 && p2x1 < p1x2) ||
+				(p2x2 <= p1x2 && p2x2 > p1x1) ||
+				(p2x1 <= p1x1 && p2x2 >= p1x2)) {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 

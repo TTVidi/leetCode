@@ -23,7 +23,7 @@ import java.util.HashMap;
  * C can be placed before D (500) and M (1000) to make 400 and 900. Given a roman numeral, convert it to an integer.
  * Input is guaranteed to be within the range from 1 to 3999.
  */
-public class  SolutionNo13 {
+public class SolutionNo13 {
 	public int romanToInt(String s) {
 		char[] chars = s.toCharArray();
 		int result = 0;

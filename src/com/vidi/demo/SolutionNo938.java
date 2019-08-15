@@ -26,8 +26,8 @@ public class SolutionNo938 {
 		if (root != null) {
 			if (root.val <= R && root.val >= L) {
 				return root.val + rangeSumBST(root.left, L, R) + rangeSumBST(root.right, L, R);
-			}else {
-				return  rangeSumBST(root.left, L, R) + rangeSumBST(root.right, L, R);
+			} else {
+				return rangeSumBST(root.left, L, R) + rangeSumBST(root.right, L, R);
 			}
 		}
 		return 0;

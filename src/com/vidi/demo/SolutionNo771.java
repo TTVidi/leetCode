@@ -30,6 +30,6 @@ public class SolutionNo771 {
 
 	public static void main(String[] args) {
 		SolutionNo771 solution = new SolutionNo771();
-		System.out.println(solution.numJewelsInStones("aA","aAAbbbb"));
+		System.out.println(solution.numJewelsInStones("aA", "aAAbbbb"));
 	}
 }

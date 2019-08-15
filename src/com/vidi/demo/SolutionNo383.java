@@ -35,6 +35,6 @@ public class SolutionNo383 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(canConstruct("aa","aab"));
+		System.out.println(canConstruct("aa", "aab"));
 	}
 }

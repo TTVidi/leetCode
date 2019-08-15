@@ -34,8 +34,7 @@ public class SolutionNo136 {
 	}
 
 
-
 	public static void main(String[] args) {
-		System.out.println(singleNumber(new int[]{4,1,2,1,2}));
+		System.out.println(singleNumber(new int[]{4, 1, 2, 1, 2}));
 	}
 }

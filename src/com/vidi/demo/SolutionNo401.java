@@ -31,12 +31,12 @@ public class SolutionNo401 {
 	void backtracking(List<String> res, int[] digits, int remain, int current) {
 		if (remain == 0) { // complete permutation
 			int hour = 0;
-			for (int i = 0; i <= 3; i ++) {
-				hour += digits[i] * (int)Math.pow(2, 3 - i);
+			for (int i = 0; i <= 3; i++) {
+				hour += digits[i] * (int) Math.pow(2, 3 - i);
 			}
 			int min = 0;
-			for (int i = 4; i <= 9; i ++) {
-				min += digits[i] * (int)Math.pow(2, 9 - i);
+			for (int i = 4; i <= 9; i++) {
+				min += digits[i] * (int) Math.pow(2, 9 - i);
 			}
 			if (hour <= 11 && min <= 59)
 				res.add((new StringBuilder(4))
@@ -46,7 +46,7 @@ public class SolutionNo401 {
 						.append(min % 10)
 						.toString());
 		} else {
-			for (int i = current; i < digits.length; i ++) { // loop from current digit to the end
+			for (int i = current; i < digits.length; i++) { // loop from current digit to the end
 				digits[i] = 1; // set current digit to 1
 				backtracking(res, digits, remain - 1, i + 1); // get permutation for digits on the right
 				digits[i] = 0; // reset current digit to 0

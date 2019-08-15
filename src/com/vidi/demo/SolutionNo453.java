@@ -41,19 +41,19 @@ public class SolutionNo453 {
 
 	public static int minMoves2(int[] nums) {
 		int min = Integer.MAX_VALUE;
-		for (int num:nums) {
+		for (int num : nums) {
 			if (num < min) {
 				min = num;
 			}
 		}
 		int ans = 0;
-		for (int num:nums) {
+		for (int num : nums) {
 			ans += num - min;
 		}
 		return ans;
 	}
 
 	public static void main(String[] args) {
-		System.out.println(minMoves2(new int[]{-100,0,100}));
+		System.out.println(minMoves2(new int[]{-100, 0, 100}));
 	}
 }

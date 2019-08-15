@@ -58,6 +58,6 @@ public class SolutionNo682 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(calPoints(new String[]{"5","2","C","D","+"}));
+		System.out.println(calPoints(new String[]{"5", "2", "C", "D", "+"}));
 	}
 }

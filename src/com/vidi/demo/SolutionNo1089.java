@@ -26,7 +26,7 @@ public class SolutionNo1089 {
 	}
 
 	public static void main(String[] args) {
-		new SolutionNo1089().duplicateZeros(new int[]{1,2,3});
+		new SolutionNo1089().duplicateZeros(new int[]{1, 2, 3});
 	}
 
 }

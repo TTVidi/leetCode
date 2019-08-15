@@ -31,7 +31,7 @@ public class SolutionNo830 {
 				if (index >= 3) {
 					List<Integer> temp = new ArrayList<>();
 					temp.add(i - index);
-					temp.add(i-1);
+					temp.add(i - 1);
 					result.add(temp);
 				}
 				index = 1;
@@ -40,7 +40,7 @@ public class SolutionNo830 {
 		if (index >= 3) {
 			List<Integer> temp = new ArrayList<>();
 			temp.add(S.length() - index);
-			temp.add(S.length()-1);
+			temp.add(S.length() - 1);
 			result.add(temp);
 		}
 		return result;

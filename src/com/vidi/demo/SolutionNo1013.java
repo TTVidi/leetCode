@@ -32,6 +32,6 @@ public class SolutionNo1013 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(new SolutionNo1013().canThreePartsEqualSum(new int[]{3,3,6,5,-2,2,5,1,-9,4}));
+		System.out.println(new SolutionNo1013().canThreePartsEqualSum(new int[]{3, 3, 6, 5, -2, 2, 5, 1, -9, 4}));
 	}
 }

@@ -30,7 +30,7 @@ public class SolutionNo599 {
 				int temp = map.get(list2[i]) + i;
 				if (temp == index) {
 					list.add(list2[i]);
-				} else if ( temp< index) {
+				} else if (temp < index) {
 					index = temp;
 					list = new ArrayList<>();
 					list.add(list2[i]);
@@ -38,7 +38,7 @@ public class SolutionNo599 {
 			}
 		}
 		String[] ans = new String[list.size()];
-		for(int i = 0; i < list.size(); i++){
+		for (int i = 0; i < list.size(); i++) {
 			ans[i] = list.get(i);
 		}
 		return ans;

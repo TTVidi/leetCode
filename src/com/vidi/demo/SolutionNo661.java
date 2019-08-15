@@ -19,14 +19,38 @@ public class SolutionNo661 {
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < col; j++) {
 				int num = 1, val = M[i][j];
-				if (i > 0) {++num; val += M[i-1][j];}
-				if (i < row-1) {++num; val += M[i+1][j];}
-				if (j > 0) {++num; val += M[i][j-1];}
-				if (j < col-1) {++num; val += M[i][j+1];}
-				if (i > 0 && j > 0) {++num; val += M[i-1][j-1];}
-				if (i > 0 && j < col-1) {++num; val += M[i-1][j+1];}
-				if (i < row-1 && j > 0) {++num; val += M[i+1][j-1];}
-				if (i < row-1 && j < col-1) {++num; val += M[i+1][j+1];}
+				if (i > 0) {
+					++num;
+					val += M[i - 1][j];
+				}
+				if (i < row - 1) {
+					++num;
+					val += M[i + 1][j];
+				}
+				if (j > 0) {
+					++num;
+					val += M[i][j - 1];
+				}
+				if (j < col - 1) {
+					++num;
+					val += M[i][j + 1];
+				}
+				if (i > 0 && j > 0) {
+					++num;
+					val += M[i - 1][j - 1];
+				}
+				if (i > 0 && j < col - 1) {
+					++num;
+					val += M[i - 1][j + 1];
+				}
+				if (i < row - 1 && j > 0) {
+					++num;
+					val += M[i + 1][j - 1];
+				}
+				if (i < row - 1 && j < col - 1) {
+					++num;
+					val += M[i + 1][j + 1];
+				}
 				result[i][j] = val / num;
 			}
 		}

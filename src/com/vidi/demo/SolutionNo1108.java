@@ -9,7 +9,7 @@ package com.vidi.demo;
  */
 public class SolutionNo1108 {
 	public static String defangIPaddr(String address) {
-		address=address.replace(".", "[.]");
+		address = address.replace(".", "[.]");
 		return address;
 	}
 

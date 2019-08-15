@@ -52,7 +52,7 @@ public class SolutionNo762 {
 	}
 
 	public static void main(String[] args) {
-		SolutionNo762 solutionNo762 =new SolutionNo762();
+		SolutionNo762 solutionNo762 = new SolutionNo762();
 		int i = solutionNo762.countPrimeSetBits(244, 269);
 		System.out.println(i);
 	}

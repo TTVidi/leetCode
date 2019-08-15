@@ -45,7 +45,7 @@ public class SolutionNo1002 {
 	}
 
 	public static void main(String[] args) {
-		for (String s : new SolutionNo1002().commonChars(new String[]{"cool","lock","cook"})) {
+		for (String s : new SolutionNo1002().commonChars(new String[]{"cool", "lock", "cook"})) {
 			System.out.println(s);
 		}
 	}
